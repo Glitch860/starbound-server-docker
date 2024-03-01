@@ -1,10 +1,12 @@
+version: '4'
+
 services:
   starbound-server:
     image: didstopia/starbound-server:latest
     build:
       context: .
       dockerfile: Dockerfile
-    env_file: .env
+    env_file: steam.env
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     ports:
@@ -15,4 +17,14 @@ services:
 
 volumes:
   starbound-data:
+      driver: local
+      driver_opts:
+        type: nfs
+        o: addr=192.168.1.X,rw
+        device: ":/mnt/<PATH TO NFS SHARE FOLDER>/starbound"
   starbound-steam:
+      driver: local
+      driver_opts:
+        type: nfs
+        o: addr=192.168.1.X,rw
+        device: ":/mnt/<PATH TO NFS SHARE FOLDER>/starbound"
