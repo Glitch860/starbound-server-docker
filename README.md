@@ -38,7 +38,7 @@ As long as you have both your `STEAM_USERNAME` and `STEAM_PASSWORD` set, simply 
 This was the best image I found to use as a base for modding Starbound server running in Docker on an NFS share.
 You will want to clone the files from this Github Repo. On the client side you will also want to download from this repo. 
 
-(fracking universe mod repo)[https://github.com/sayterdarkwynd/FrackinUniverse]
+(fracking universe mod repo) [https://github.com/sayterdarkwynd/FrackinUniverse]
 
 > All mods docker server side and client side should be downloaded to /mods folder
 
