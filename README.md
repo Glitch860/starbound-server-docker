@@ -1,6 +1,7 @@
 # Starbound server that runs inside a Docker container
 
 **NOTE**: This image will install/update on startup. The path ```/steamcmd/starbound``` can be mounted on the host for data persistence.
+> My docker compose file will have an example of running the container with an NFS share attached
 
 # How to run the server
 1. Set the environment variables you wish to modify from below (note the Steam credentials)
@@ -33,6 +34,11 @@ NOTE: At some point we may make a less tedious workaround for this, such as a we
 
 As long as you have both your `STEAM_USERNAME` and `STEAM_PASSWORD` set, simply restarting the container should trigger the update procedure.
 
-# Anything else
+# Adding Frackin Universe Mods
+This was the best image I found to use as a base for modding Starbound server running in Docker on an NFS share.
+You will want to clone the files from this Github Repo. On the client side you will also want to download from this repo. 
 
-If you need help, have questions or bug submissions, feel free to contact me **@Dids** on Twitter.
+(fracking universe mod repo)[https://github.com/sayterdarkwynd/FrackinUniverse]
+
+> All mods docker server side and client side should be downloaded to /mods folder
+
